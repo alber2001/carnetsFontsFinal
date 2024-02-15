@@ -86,7 +86,7 @@ export class ReversoComponent implements OnInit {
           {
             text: 'Este Carnet es exclusivo para usarse en el cobro de la pensión correspondiente',
             style: 'mensaje',
-            margin: [0, 18, 0, 0],            
+            margin: [0, 18, 0, 0],
           },
           {
             image: firmaGerencia,
@@ -117,42 +117,79 @@ export class ReversoComponent implements OnInit {
           },
           {
             text: 'Gerencia del Régimen RSPS - IHSS',
-            style:'gerencia'
+            style: 'gerencia',
           },
         ],
       });
-      row.push({
-        stack: [
-          {
-            text: 'PENSIONADO(A) POR:',
-            style: 'reversoTitulo',
-          },
-          {
-            text: `${record2.causa}`,
-            style: 'causa',
-            margin: [110, -12, 0, 0],
-          },
-          {
-            canvas: [
-              {
-                type: 'line',
-                x1: 0,
-                y1: 0,
-                x2: 120,
-                y2: 0,
-                lineWidth: 1,
-                lineColor: 'black',
-              },
-            ],
-            margin: [100, 1, 0, 0],
-          },
-          {
-            text: 'Este Carnet es exclusivo para usarse en el cobro de la pensión correspondiente',
-            style: 'mensaje',
-            margin: [0, 18, 0, 0],
-          },
-        ],
-      });
+
+      row.push(
+        record2
+          ? {
+              stack: [
+                {
+                  text: 'PENSIONADO(A) POR:',
+                  style: 'reversoTitulo',
+                },
+                {
+                  text: `${record2.causa}`,
+                  style: 'causa',
+                  margin: [110, -12, 0, 0],
+                },
+                {
+                  canvas: [
+                    {
+                      type: 'line',
+                      x1: 0,
+                      y1: 0,
+                      x2: 120,
+                      y2: 0,
+                      lineWidth: 1,
+                      lineColor: 'black',
+                    },
+                  ],
+                  margin: [100, 1, 0, 0],
+                },
+                {
+                  text: 'Este Carnet es exclusivo para usarse en el cobro de la pensión correspondiente',
+                  style: 'mensaje',
+                  margin: [0, 18, 0, 0],
+                },
+                {
+                  image: firmaGerencia,
+                  width: 135.5,
+                  height: 62.36,
+                  absolutePosition: { x: 28, y: 55 },
+                },
+                {
+                  image: selloGerencia,
+                  width: 76.9706,
+                  height: 78.0316,
+                  absolutePosition: { x: 128, y: 44.8599 },
+                },
+                {
+                  canvas: [
+                    {
+                      type: 'line',
+                      x1: 0,
+                      y1: 0,
+                      x2: 200,
+                      y2: 0,
+                      lineWidth: 1,
+                      lineColor: 'black',
+                    },
+                  ],
+                  alignment: 'center',
+                  margin: [0, 40, 0, 0],
+                },
+                {
+                  text: 'Gerencia del Régimen RSPS - IHSS',
+                  style: 'gerencia2',
+                },
+              ],
+            }
+          : { text: '', alignment: 'center' }
+      );
+
       row.reverse();
       body.push(row);
     }
@@ -160,9 +197,9 @@ export class ReversoComponent implements OnInit {
     return {
       layout: {
         hLineWidth: (i, node) =>
-          i === 0 || i === node.table.body.length ? 0.5 : 0.5,
+          i === 0 || i === node.table.body.length ? 0.0 : 0.0,
         vLineWidth: (i, node) =>
-          i === 0 || i === node.table.widths.length ? 0.5 : 0.5,
+          i === 0 || i === node.table.widths.length ? 0.0 : 0.0,
       },
       table: {
         headerRows: 1,

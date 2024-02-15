@@ -72,6 +72,13 @@ export const styles = {
     fontSize: 9,
     margin: [0, 2, 0, 0],
     alignment: 'center',
+  },
+  gerencia2: {
+    font: 'Arial',   
+    bold: false,
+    fontSize: 9,
+    margin: [0, 2, 0, 0],
+    alignment: 'center',
   }
 
 };
