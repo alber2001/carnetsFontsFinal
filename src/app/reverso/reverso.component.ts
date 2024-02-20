@@ -46,6 +46,14 @@ export class ReversoComponent implements OnInit {
       styles,
       defaultStyle,
       content: chunks.map((chunk) => this.createTable(chunk)),
+      footer: function (currentPage, pageCount) {
+        return {
+          text: currentPage.toString() + ' de ' + pageCount,
+          alignment: 'center',
+          style: 'normal',
+          margin: [0, 30, 0, 0], // Ajusta el margen como desees
+        };
+      },
     };
 
     pdfMake.createPdf(documentDefinition).open();
@@ -57,7 +65,6 @@ export class ReversoComponent implements OnInit {
       const row = [];
       const record1 = data[i];
       const record2 = i + 1 < data.length ? data[i + 1] : null;
-
       row.push({
         stack: [
           {
@@ -189,7 +196,6 @@ export class ReversoComponent implements OnInit {
             }
           : { text: '', alignment: 'center' }
       );
-
       row.reverse();
       body.push(row);
     }

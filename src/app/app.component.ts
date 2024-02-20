@@ -49,14 +49,14 @@ export class AppComponent implements OnInit {
       styles,
       defaultStyle,
       content: chunks.map((chunk) => this.createTable(chunk)),
-      footer: function(currentPage, pageCount) {
+      footer: function (currentPage, pageCount) {
         return {
-            text: currentPage.toString() + ' de ' + pageCount,
-            alignment: 'center',
-            style: 'normal',
-            margin: [0, 30, 0, 0] // Ajusta el margen como desees
+          text: currentPage.toString() + ' de ' + pageCount,
+          alignment: 'center',
+          style: 'normal',
+          margin: [0, 30, 0, 0], // Ajusta el margen como desees
         };
-    }
+      },
     };
 
     pdfMake.createPdf(documentDefinition).open();
@@ -127,7 +127,7 @@ export class AppComponent implements OnInit {
           {
             text: `${record1.area}`,
             style: 'area1',
-            margin: [-55, 1, 0, 0],
+            margin: [-63, 1, 0, 0],
           },
           {
             text: 'Nombre del pensionado',
@@ -217,7 +217,7 @@ export class AppComponent implements OnInit {
                   alignment: 'center',
                   margin: [0, 1, 0, 0],
                 },
-                
+
                 {
                   text: 'Nombre del pensionado',
                   style: 'subtitulo',
@@ -226,7 +226,7 @@ export class AppComponent implements OnInit {
                 {
                   text: `${record2.area}`,
                   style: 'area1',
-                  absolutePosition: {x: 520, y: 12}                  
+                  absolutePosition: { x: 520, y: 12 },
                 },
                 {
                   text: `${record2.numero_pago}`,
