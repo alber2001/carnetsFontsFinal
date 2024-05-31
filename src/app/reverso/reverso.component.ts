@@ -42,7 +42,7 @@ export class ReversoComponent implements OnInit {
     const documentDefinition = {
       pageSize: 'letter',
       pageOrientation: 'portrait',
-      pageMargins: [73.5, 56.693, 73.5, 83],
+      pageMargins: [70, 56.693, 70, 83],
       styles,
       defaultStyle,
       content: chunks.map((chunk) => this.createTable(chunk)),
@@ -74,7 +74,7 @@ export class ReversoComponent implements OnInit {
           {
             text: `${record1.causa}`,
             style: 'causa',
-            margin: [110, -12, 0, 0],
+            margin: [107, -12, 0, 0],
           },
           {
             canvas: [
@@ -140,7 +140,7 @@ export class ReversoComponent implements OnInit {
                 {
                   text: `${record2.causa}`,
                   style: 'causa',
-                  margin: [110, -12, 0, 0],
+                  margin: [107, -12, 0, 0],
                 },
                 {
                   canvas: [
