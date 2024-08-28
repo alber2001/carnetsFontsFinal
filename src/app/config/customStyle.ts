@@ -6,11 +6,18 @@ export const styles = {
     alignment: 'center',
     margin: [0, 100, 0, 0],
   },
+  header1: {
+    font: 'Arial',
+    fontSize: 12,
+    bold: true,
+    alignment: 'center',
+    margin: [0, 60, 0, 0],
+  },
   negrita: {
     font: 'Arial',
     fontSize: 8,
     bold: true,
-  },  
+  },
   negritaLil: {
     font: 'Arial',
     fontSize: 7,
@@ -25,7 +32,7 @@ export const styles = {
   subtitulo: {
     font: 'Arial',
     fontSize: 10,
-    
+
     alignment: 'center',
     margin: [0, 2, 0, 0],
   },
@@ -37,55 +44,69 @@ export const styles = {
     alignment: 'center',
   },
   control: {
-    font: 'Arial',   
+    font: 'Arial',
     fontSize: 10,
     alignment: 'center',
     margin: [0, 1, 0, 0],
   },
   area1: {
-    font: 'Arial',   
-    fontSize: 6,        
+    font: 'Arial',
+    fontSize: 6,
   },
-  normal:{
-    font: 'Arial',   
-    fontSize: 8,        
+  normal: {
+    font: 'Arial',
+    fontSize: 8,
   },
-  reversoTitulo:{
-    font: 'Arial',   
+  reversoTitulo: {
+    font: 'Arial',
     fontSize: 8,
     margin: [-1, 22, 0, 0],
   },
-  causa:{
-    font: 'Arial',   
-    fontSize: 10 ,
+  causa: {
+    font: 'Arial',
+    fontSize: 10,
     alignment: 'center',
-    bold: 'true'
+    bold: 'true',
   },
-  mensaje:{
-    font: 'Arial',   
+  mensaje: {
+    font: 'Arial',
     fontSize: 9,
     alignment: 'left',
   },
   gerencia: {
-    font: 'Arial',   
+    font: 'Arial',
     bold: false,
     fontSize: 9,
     margin: [0, 2, 0, 0],
     alignment: 'center',
   },
   gerencia2: {
-    font: 'Arial',   
+    font: 'Arial',
     bold: false,
     fontSize: 9,
     margin: [0, 2, 0, 0],
     alignment: 'center',
-  }
+  },
 
+  test: {
+    font: 'Arial',
+    bold: false,
+    fontSize: 9,
+    alignment: 'left',
+  },
+  paragraph: {
+    font: 'Arial',
+    fontSize: 12,
+    margin: [0, 0, 0, 5], // Margen de 10 unidades en la parte inferior del párrafo
+    indent: 10, // Sangría de 20 unidades (ajusta según tus necesidades)
+    alignment: 'left',
+    bold: 'true',
+  },
 };
 
 export const defaultStyle = {
   header: {
-    font: 'Arial',    
+    font: 'Arial',
     fontSize: 8,
     color: '#000',
   },

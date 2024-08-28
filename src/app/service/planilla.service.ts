@@ -3,7 +3,6 @@ import { HttpClient , HttpParams } from '@angular/common/http';
 import { Pensionado } from '../model/planilla.model';
 import { Observable } from 'rxjs';
 
-
 @Injectable({
   providedIn: 'root',
 })
