@@ -249,7 +249,8 @@ export class AyudaComponent implements OnInit {
             ],
           },
         },
-      ],
+        {text: `${this.data.usuario}`, style: 'normal'}
+      ],      
     };
     pdfMake.createPdf(documentDefinition).open();
   }
